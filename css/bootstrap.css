@@ -4,9 +4,21 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+<<<<<<< HEAD
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
+=======
+/* IMPORTING FONTS */
+@font-face{
+  font-family: "quicksand";
+  src: url('../fonts/Quicksand-Regular.otf');
+}
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+html {
+  font-family: quicksand;
+>>>>>>> origin/master
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
