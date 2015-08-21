@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 
-    <title>Project - Perching Landing Gear</title>
+    <title>Project - Thor's Hammers</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -75,8 +75,8 @@
         <!-- Portfolio Item Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Perching Landing Gear
-                    <small>Gravity Powered and Under-actuated</small>
+                <h1 class="page-header">"Thor's Hammers"
+                    <small>Mathematical Simulation of Kinetic Sculptures</small>
                 </h1>
             </div>
         </div>
@@ -86,26 +86,26 @@
         <div class="row">
 
             <div class="col-md-8">
-                <img class="img-responsive" src="img/portfolio/plg-preview.JPG" alt="Perching Preview">
+                <img class="img-responsive" src="img/portfolio/kinetic-sculpture.jpg" alt="Perching Preview">
             </div>
 
             <div class="col-md-4">
-                <h3>The Context</h3>
-                <p>Unmanned aerial vehicles (UAVs) have increased in popularity in areas like surveillance, photography, and sample collection. These versatile drones have allowed for exploration in areas that would be difficult, dangerous, or costly via manned aircraft. As the environments drones are used in expand, the availability of platforms that drones are capable of landing on are limited to the landing mechanisms they are outfitted with. By attaching landing gear that is not limited to level, planar surfaces, we remove a restriction in the application of drones.</p>
-
-                <p>Over 11 weeks between June and August 2015, a group of 5 undergraduates and I developed landing gears that would allow for commercially available drones to perch on plateforms such as bars, pipes, branches, and wires. A more detailed write up of the entire project can be found on our advisor, Chris Lee's <a href="http://faculty.olin.edu/~clee1/plg.html">website</a>.</p>
+                <h3>The Project</h3>
+                <p>Kinetic art is a piece that relies on its percieved motion for effect on the viwer. An integral part of many moden three dimensional kinetic sculptures are modified pendulums, as exemplified in Ken Patton's <a href="https://www.youtube.com/watch?v=vh2a4a6JPM8">"Thor's Hammers"</a>. By calculating the forces, moments, and accelerations acting in a modified quintuple compound pendulum, fellow student, Maire Keene and I derived ordinary differential equations of motion for the system and implemented them in MATLAB to model the motion of the sculpture. For validation purposes, we deliberately ignored damping forces and were able to get constant total energy values for all sets of initial conditions. The addition of damping forces causes significant changes in system behavior but also shows a predictable decline in the total energy of the system.</p>
             </div>
 
         </div>
         <!-- /.row -->
 
-                <h3>The Design</h3>
-                <p>I designed a passive system that would use the weight of the drone to collapse eight four-bar linkages and actuate four flexible grasping digits. The landing gear was comprised of two "legs", each made of two laser-cut acrylic four-bar linkages with 3D printed pulleys at each pivot. The fishing line ran through the bottom three pulleys and through two 3D printed grasping digits. A jamming mechanism directed the four-bar from collapse into one direction, removing slop. The 3D printed grasping digits were made from NinjaFlex and ABS filaments and printed on the <a href="http://store.makerbot.com/replicator2x">MakerBot Replicator 2X</a>. A gradient of flexible filament and segment geometry ensured that the digit would actuate from the base to the tip. This would prevent the case of the digit curling before actually grasping the object.</p>
-                <p>Two versions of the four-bar landing gear were designed, fabricated, and tested. The first was a static version in which the four-bars were mounted to the bottom of a <a href="http://www.dji.com/product/flame-wheel-arf/feature"> FlameWheel F550</a> at a fixed angle. This would allow for the drone to take advantage of a stalling behavior directly over the perch and allow for vertical take off and landing (VTOL). The second dynamic design introduced a servo between the bottom plate of the FlameWheel chassis and a axel to which the two legs mounted. This would allow for the angle between the drone chassis and the legs to change and approach the perch from an angle. The introduction of a servo also created a niche for a self leveling mechanism if a gyroscope was to be introduced.</p>
+                <h3>The Simulation</h3>
+                <p>Many dynamics courses review the case of a double pendulum, first using point masses and then evolving into compound rods. In reality one can find many examples of even more complex pendulums or systems that can be modeled well by multi-bodied pendulums. Here we have the familiar compund double pendulum modified into a planar quintuple pendulum composed of more complex bodies concatenated with pivots offset from the ends of those bodies. Our approach to the model involves applying Newton's Second Law and Euler's equations to each body. A simulation and animation of our system model was created and energy values for conditions where damping forces are assumed to be zero are used for validation.</p>
 
-                <h3>The Performance</h3>
-                <p>A series of dexterity tests were performed using marionette strings with both the static and the dynamic landing gear. An empty FlameWheel chassis was used with a three cell battery strapped on to emulate the weight. While the dynamic landing was able to perch on a 2x4 wood bar, and adjust its leveling, it failed to successfully land on branches or other irregular perches. The static landing gear was able to perch on a variety of platforms such as a handrail, stone divier's ledge, branch, 2x4, and PVC pipe. However, both landing gears required precise control to align the "palms" with the perch. If the palms did not align, the drone slipped and failed the perch.</p>
-                <p>A flight test with the static landing gear using a fully outfitted and manually controled DJI FlameWheel. Unlike the marionette tests, the manual flights proved too difficult to control and accurately land on the branch during the test. The drone was able to start from a perching position at rest and easily release the branch once the drone started taking off and removing its weight from the four-bar.</p>
+                <center><img src="img/KineticSculp/hammerParameters.jpg" style="width:50%"></center>
+
+                <p>The system model is based off of the kinetic sculpture Thor's Hammers", which is a set of five hammers concatenated using bearings and given some initial displacement and velocity. Note that the fifth hammer in the sculpture is modified to have two hammer heads, one at each end of the rod. Given the thin nature of the hammers, the expected speeds of the bodies, and the use of mechanical bearings in the sculpture, we are assuming that the only damping force is viscous damping and not aerodynamic damping. However, since our validation graphs rely on conservation of energy, we have set the damping coeficient to 0 in the simulation code used to produce the figures below. We also assume that the hammer handles can be abstracted into thin rod masses and that the hammer heads can be abstracted to point masses. This somewhat neglects a more accurate distribution of mass through the bodies, but is a better model of a hammer than a simple rigid rod such as used previously in our course pedulum models.</p>
+
+                <center><iframe width="80%" height="400" src="https://www.youtube.com/embed/LQ2EvKfoQyo" frameborder="0" allowfullscreen></iframe></center>
+                <center><img src="img/KineticSculp/Engery_quintupleComplexHammers.png" style="width:60%"></center>
 
         <!-- Related Projects Row -->
         <div class="row">
@@ -115,14 +115,14 @@
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="hand.html">
-                    <img class="img-responsive portfolio-item" src="img/portfolio/mech-hand.jpg" alt="Mechanical Hand">
+                <a href="plg.html">
+                    <img class="img-responsive portfolio-item" src="img/portfolio/plg-preview.jpg" alt="PLG">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="snotbot.html">
-                    <img class="img-responsive portfolio-item" src="img/portfolio/snot-bot.jpg" alt="Snot Bot">
+                <a href="pacif.html">
+                    <img class="img-responsive portfolio-item" src="img/portfolio/pacif-preview.jpg" alt="Tesini Pacifier">
                 </a>
             </div>
 
@@ -133,8 +133,8 @@
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="hammer.html">
-                    <img class="img-responsive portfolio-item" src="img/portfolio/kinetic-sculpture.jpg" alt="hammers">
+                <a href="hand.html">
+                    <img class="img-responsive portfolio-item" src="img/portfolio/mech-hand.jpg" alt="Claw">
                 </a>
             </div>
 

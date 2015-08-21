@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 
-    <title>Mindy Tieu</title>
+    <title>Project - Tesini Pacifier</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -75,8 +75,8 @@
         <!-- Portfolio Item Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Perching Landing Gear
-                    <small>Gravity Powered and Under-actuated</small>
+                <h1 class="page-header">Orthodontic Pacifier Design
+                    <small>Finite Element Anaysis of Biomedical Materials</small>
                 </h1>
             </div>
         </div>
@@ -86,43 +86,107 @@
         <div class="row">
 
             <div class="col-md-8">
-                <img class="img-responsive" src="img/portfolio/plg-preview.JPG" alt="Perching Preview">
+                <img class="img-responsive" src="img/portfolio/pacif-preview.JPG" alt="Pacifier Preview">
             </div>
 
             <div class="col-md-4">
                 <h3>The Context</h3>
-                <p>Unmanned aerial vehicles (UAVs) have increased in popularity in areas like surveillance, photography, and sample collection. These versatile drones have allowed for exploration in areas that would be difficult, dangerous, or costly via manned aircraft. As the environments drones are used in expand, the availability of platforms that drones are capable of landing on are limited to the landing mechanisms they are outfitted with. By attaching landing gear that is not limited to level, planar surfaces, we remove a restriction in the application of drones.</p>
-
-                <p>Over 11 weeks between June and August 2015, a group of 5 undergraduates and I developed landing gears that would allow for commercially available drones to perch on plateforms such as bars, pipes, branches, and wires.A more detailed write up of the entire project can be found on our advisor, Chris Lee's <a href="http://faculty.olin.edu/~clee1/plg.html">website</a>.</p>
+                <p>One of the very first human behaviors learned is sucking. Sucking can be split into two catagories: nutritive, during which the infant acquires nourishment and non-nutritive, during which the infant does not ingest anything but experiences a calming effect. Although the pacifiers are hugely useful in comforting babies and infants, there has been studies conducted in recent decades that suggest negative long term effects of non-nutritive sucking. By understanding the perisaltic motions of the mouth and tongue during sucking, pediatric dentist, Dr. David Tesini and bio-medical engineer Mr. Josh Wiesman have developed a new pacifier design believed to reduce the impact of non-nutritive sucking on the upper palate. In order to prove the effectiveness of the design, they came to Dr. Chris Lee and his team of student researchers at Olin College for a simulation and analysis of the new dummy bulb designs. A more detailed write up of the entire project can be found on Chris Lee's <a href="http://faculty.olin.edu/~clee1/pacif.html">website</a>.</p>
             </div>
 
         </div>
         <!-- /.row -->
 
                 <h3>The Design</h3>
-                <p>I designed a passive system that would use the weight of the drone to collapse eight four-bar linkages and actuate four flexible grasping digits. The landing gear was comprised of two "legs", each made of two laser-cut acrylic four-bar linkages with 3D printed pulleys at each pivot. The fishing line ran through the bottom three pulleys and through two 3D printed grasping digits. A jamming mechanism directed the four-bar from collapse into one direction, removing slop. The 3D printed grasping digits were made from NinjaFlex and ABS filaments and printed on the <a href="http://store.makerbot.com/replicator2x">MakerBot Replicator 2X</a>. A gradient of flexible filament and segment geometry ensured that the digit would actuate from the base to the tip. This would prevent the case of the digit curling before actually grasping the object.</p>
-                <p>Two versions of the four-bar landing gear were designed, fabricated, and tested. The first was a static version in which the four-bars were mounted to the bottom of a <a href="http://www.dji.com/product/flame-wheel-arf/feature"> FlameWheel F550</a> at a fixed angle. This would allow for the drone to take advantage of a stalling behavior directly over the perch and allow for vertical take off and landing (VTOL). The second dynamic design introduced a servo between the bottom plate of the FlameWheel chassis and a axel to which the two legs mounted. This would allow for the angle between the drone chassis and the legs to change and approach the perch from an angle. The introduction of a servo also created a niche for a self leveling mechanism if a gyroscope was to be introduced.</p>
+                <p>Dr. Tesini's first new design, the Tommee Tippee pacifier is similar to the Nature Orthodontic Pacifier, designed to collapse into a configuration that adheres to the contours of the upper palate. This prevents the tongue from wrapping around the sides of the pacifier bulb and compressing the bulb into a swallowable form. A common phenomenon that occurs with currently available commercial bulbs is that the bulb will be compressed by the tongue and form a median line of support along the upper palate. By creating a bulb that cannot be compressed laterally, Dr. Tesini and Mr. Wiesman's design supports the entire upper palate and reduces the likelyhood of upper palate collapse and deformation. The second design has a more convex bottom hemisphere as well as additional internal ribbings.</p>
 
-                <h3>The Performance</h3>
-                <p>A series of dexterity tests were performed using marionette strings with both the static and the dynamic landing gear. An empty FlameWheel chassis was used with a three cell battery strapped on to emulate the weight. While the dynamic landing was able to perch on a 2x4 wood bar, and adjust its leveling, it failed to successfully land on branches or other irregular perches. The static landing gear was able to perch on a variety of platforms such as a handrail, stone divier's ledge, branch, 2x4, and PVC pipe. However, both landing gears required precise control to align the "palms" with the perch. If the palms did not align, the drone slipped and failed the perch.</p>
-                <p>A flight test with the static landing gear using a fully outfitted and manually controled DJI FlameWheel. Unlike the marionette tests, the manual flights proved too difficult to control and accurately land on the branch during the test. The drone was able to start from a perching position at rest and easily release the branch once the drone started taking off and removing its weight from the four-bar.</p>
+                <p>Over 11 weeks from June to August 2015, CAD models for an infant's upper palate, Dr. Tesini's two new pacifier designs, the Soothie brand pacifier, and the NUK brand orthodontic pacifier were assembled into SolidWorks dynamic non-linear simulations. The CAD models for Tesini's designs, the upper palate, and the Soothie brand pacifier were provided by Mr. Wiesman while the NUK brand pacifier was created using a 3D scanner, smoothed in Blender, and hallowed out in SolidWorks.</p>
+
+                <p>The four perisaltic motions that occur during sucking were abstracted into two pressures applied directly to the surfaces of the pacifier bulbs. The first two motions were simplified into one pressure against the bottom hemisphere of the pacifier bulbs. The second two motions were simplified into two inward pressures against the sides of the pacifier. These pressures were temporally offset but reached a peak intra-oral pressure of 58 mbar or .8688 psi. This value is based off A. Lindner's "Measurement of intra-oral negative air pressure during dummy sucking in human newborn".</p>
+
+                <p>Further abstraction was applied to the material properties of the upper palate and the pacifier bulbs. The entire upper palate (teeth, gum, and other biological materials) was abstacted to one homogeneous, isotropic, linearly elastic material. The Poisson's Ratio and Young's Modulus for the upper palate and the silicone rubber for all four bulbs were taken from a paper by Levrini et. al, "Different geometric patterns of pacifiers compared on the basis of finite element analysis". The silicone rubber was defined as a non-linear material with a stress-curve that was taken from a sample cut from a NUK pacifier and loaded onto an Instron 3300.</p>
+
+                <h3>The Results</h3>
+                <p>Results comparing the bulb deformation and maximum palate stress of Tesini's two designs and the Soothie brand bulb were created from simulations of the first two perisaltic motions. Tesini's first design faired the best followed by his second and the Soothie brand pacifier faired the worst.</p>
+                <table style="width:80%" align="center">
+                    <tr align="center">
+                        <td><b>Pacifier</b></td>
+                        <td><b>Bulb Deformation</b></td>
+                        <td><b>Percent Deformation</b></td>
+                        <td><b>Max Palate Stress</b></td>
+                    </tr>
+                    <tr align="center">
+                        <td>Tesini V1</td>
+                        <td>-0.0011 in</td>
+                        <td> 0.1157%</td>
+                        <td>2.756e5 Pa</td>
+                    </tr>
+                    <tr align="center">
+                        <td>Tesini V2</td>
+                        <td>-0.0032 in</td>
+                        <td>0.3855%</td>
+                        <td>1.240e6 Pa</td>
+                    </tr>
+                    <tr align="center">
+                        <td>Soothie</td>
+                        <td>-0.0040 in</td>
+                        <td> 0.8333%</td>
+                        <td>1.389e5 Pa</td>
+                    </tr>
+                </table>
+                <br>
+
+                <p>Results comparing the bulb deformation and maximum palate stress of Tesini's first design and the Soothie brand bulb were created from simulations of all four (the two abstracted) perisaltic motions. Here, Tesini's design faired much better than the commercial brand.</p>
+
+                <table style="width:80%" align="center">
+                    <tr align="center">
+                        <td><b>Pacifier</b></td>
+                        <td><b>Bulb Deformation</b></td>
+                        <td><b>Percent Deformation</b></td>
+                    </tr>
+                    <tr align="center">
+                        <td>Tesini V1</td>
+                        <td>-0.0011 in</td>
+                        <td> 0.1157%</td>
+                    </tr>
+                    <tr align="center">
+                        <td>Soothie</td>
+                        <td>-0.0244 in</td>
+                        <td> 5.0833%</td>
+                    </tr>
+                </table>
+                <br>
+
+                <p>Working non-linear, dynamic simulations for the Soothie brand and Tommee Tippee pacifiers were finalized by the end of summer 2015. However, due to meshing errors in SolidWorks, working non-linear, dynamic simulations for the NUK pacifier and Tesini's second design were not reached. CAD models and simulation instructions for all four are available to the next research team but the findings for comparison across all four pacifier designs are not currently available and should be pursued in the future.</p>
 
         <!-- Related Projects Row -->
         <div class="row">
 
             <div class="col-lg-12">
-                <h3 class="page-header">Related Projects</h3>
+                <h3 class="page-header">Other Projects</h3>
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="mechhanc.html">
-                    <img class="img-responsive portfolio-item" src="img/portfolio/mech-hand.jpg" alt="Mechanical Hand">
+                <a href="hammer.html">
+                    <img class="img-responsive portfolio-item" src="img/portfolio/kinetic-sculpture.jpg" alt="Thor's Hammers">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="#snotbot">
-                    <img class="img-responsive portfolio-item" src="img/portfolio/snot-bot.jpg" alt="Snot Bot">
+                <a href="plg.html">
+                    <img class="img-responsive portfolio-item" src="img/portfolio/plg-preview.JPG" alt="PLG">
+                </a>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="gnome.html">
+                    <img class="img-responsive portfolio-item" src="img/portfolio/gnome.jpg" alt="gnome">
+                </a>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="hand.html">
+                    <img class="img-responsive portfolio-item" src="img/portfolio/mech-hand.jpg" alt="Claw">
                 </a>
             </div>
 

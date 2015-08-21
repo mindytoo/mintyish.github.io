@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 
-    <title>Project - Perching Landing Gear</title>
+    <title>Project - SnotBot</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -75,8 +75,8 @@
         <!-- Portfolio Item Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Perching Landing Gear
-                    <small>Gravity Powered and Under-actuated</small>
+                <h1 class="page-header">SnotBot
+                    <small>Using Drones in Whale Research</small>
                 </h1>
             </div>
         </div>
@@ -86,26 +86,19 @@
         <div class="row">
 
             <div class="col-md-8">
-                <img class="img-responsive" src="img/portfolio/plg-preview.JPG" alt="Perching Preview">
+                <img class="img-responsive" src="img/portfolio/snot-bot.JPG" alt="SnotBot">
             </div>
 
             <div class="col-md-4">
-                <h3>The Context</h3>
-                <p>Unmanned aerial vehicles (UAVs) have increased in popularity in areas like surveillance, photography, and sample collection. These versatile drones have allowed for exploration in areas that would be difficult, dangerous, or costly via manned aircraft. As the environments drones are used in expand, the availability of platforms that drones are capable of landing on are limited to the landing mechanisms they are outfitted with. By attaching landing gear that is not limited to level, planar surfaces, we remove a restriction in the application of drones.</p>
+                <h3>The Project</h3>
+                <p>In partnership with Ocean Alliance, the Olin Intelligent Vehicles Lab has developed "SnotBot", a specialized drone aimed to follow whales in the ocean and collect samples of whale blow when they surface. SnotBot is to autonomously take off a moving vessel, navigate to a specified target and follow it, hover over and collect blow samples, and return and land on its original vessel.</p>
+                <p>Field tests with SnotBot White and Grey (custom 3D printed quadcoptors using Pixhawks and operating with ROS and Python) have been conducted at Ocean Alliance headquarters at Gloucester. SnotShot, a small boat acting as a surrogate whale, was used to sense when the drone flew over and shoot artificial whale blow. Additional tests were performed to ensure the amount of noise whales would hear from the drones was not much more distruptive than ambient ocean sounds.</p>
 
-                <p>Over 11 weeks between June and August 2015, a group of 5 undergraduates and I developed landing gears that would allow for commercially available drones to perch on plateforms such as bars, pipes, branches, and wires. A more detailed write up of the entire project can be found on our advisor, Chris Lee's <a href="http://faculty.olin.edu/~clee1/plg.html">website</a>.</p>
+                <p>This project was presented at the <a href="http://olinivlab.weebly.com/uploads/2/2/1/5/22158624/nerc_final.pdf">NERC Robotics Conference</a> in 2014 and is continuing in the Olin Intelligent Vehicles Lab.</p>
             </div>
 
         </div>
         <!-- /.row -->
-
-                <h3>The Design</h3>
-                <p>I designed a passive system that would use the weight of the drone to collapse eight four-bar linkages and actuate four flexible grasping digits. The landing gear was comprised of two "legs", each made of two laser-cut acrylic four-bar linkages with 3D printed pulleys at each pivot. The fishing line ran through the bottom three pulleys and through two 3D printed grasping digits. A jamming mechanism directed the four-bar from collapse into one direction, removing slop. The 3D printed grasping digits were made from NinjaFlex and ABS filaments and printed on the <a href="http://store.makerbot.com/replicator2x">MakerBot Replicator 2X</a>. A gradient of flexible filament and segment geometry ensured that the digit would actuate from the base to the tip. This would prevent the case of the digit curling before actually grasping the object.</p>
-                <p>Two versions of the four-bar landing gear were designed, fabricated, and tested. The first was a static version in which the four-bars were mounted to the bottom of a <a href="http://www.dji.com/product/flame-wheel-arf/feature"> FlameWheel F550</a> at a fixed angle. This would allow for the drone to take advantage of a stalling behavior directly over the perch and allow for vertical take off and landing (VTOL). The second dynamic design introduced a servo between the bottom plate of the FlameWheel chassis and a axel to which the two legs mounted. This would allow for the angle between the drone chassis and the legs to change and approach the perch from an angle. The introduction of a servo also created a niche for a self leveling mechanism if a gyroscope was to be introduced.</p>
-
-                <h3>The Performance</h3>
-                <p>A series of dexterity tests were performed using marionette strings with both the static and the dynamic landing gear. An empty FlameWheel chassis was used with a three cell battery strapped on to emulate the weight. While the dynamic landing was able to perch on a 2x4 wood bar, and adjust its leveling, it failed to successfully land on branches or other irregular perches. The static landing gear was able to perch on a variety of platforms such as a handrail, stone divier's ledge, branch, 2x4, and PVC pipe. However, both landing gears required precise control to align the "palms" with the perch. If the palms did not align, the drone slipped and failed the perch.</p>
-                <p>A flight test with the static landing gear using a fully outfitted and manually controled DJI FlameWheel. Unlike the marionette tests, the manual flights proved too difficult to control and accurately land on the branch during the test. The drone was able to start from a perching position at rest and easily release the branch once the drone started taking off and removing its weight from the four-bar.</p>
 
         <!-- Related Projects Row -->
         <div class="row">
@@ -121,20 +114,20 @@
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="snotbot.html">
-                    <img class="img-responsive portfolio-item" src="img/portfolio/snot-bot.jpg" alt="Snot Bot">
+                <a href="plg.html">
+                    <img class="img-responsive portfolio-item" src="img/portfolio/plg-preview.jpg" alt="PLG">
+                </a>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="pacif.html">
+                    <img class="img-responsive portfolio-item" src="img/portfolio/pacif-preview.jpg" alt="Tesini Pacifier">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
                 <a href="gnome.html">
                     <img class="img-responsive portfolio-item" src="img/portfolio/gnome.jpg" alt="gnome">
-                </a>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="hammer.html">
-                    <img class="img-responsive portfolio-item" src="img/portfolio/kinetic-sculpture.jpg" alt="hammers">
                 </a>
             </div>
 
