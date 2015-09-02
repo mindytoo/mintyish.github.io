@@ -177,8 +177,9 @@ header {
     width: 100%;
     text-align: center;
     color: #fff;
-    background-image: url(../img/blog/header0.jpg);
-    background-position: center;
+    background-color: #808080;
+    background: no-repeat center center;
+    background-attachment: scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
