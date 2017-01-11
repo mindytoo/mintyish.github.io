@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--Favicon!!!! ty based favic-o-matic-->
+    <link rel="shortcut icon" href="http://www.yoursite.com/favicon.ico?v=2" />
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+
+    <title>Project - Think Inside The Box</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/portfolio-item.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+ 
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="index.html#home">Mindy Tieu</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="index.html#about">About</a>
+                        </li>
+                        <li>
+                            <a href="index.html#projects">Projects</a>
+                        </li>
+                        <li>
+                            <a href="index.html#experience">Experience</a>
+                        </li>
+                        <li>
+                            <a href="index.html#contact">Contact</a>
+                        </li>
+                        <li>
+                            <a href="m.Tieu.pdf">Resume</a>
+                        </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Portfolio Item Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Think Inside The Box
+                    <small>Space Themed, Cube Runner Inspired, Immersive Gaming Environment</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+
+            <div class="col-md-8">
+                <img class="img-responsive" src="img/portfolio/poe.jpg" alt="">
+            </div>
+
+            <div class="col-md-4">
+                <h3>The Project</h3>
+                <p>For this Principles of Engineering course at Olin College, our team, Think Inside the Box, has designed and fabricated an interactive cube-runner inspired game. The player begins by stationing themselves into a chair embedded with tilt sensors. This chair is stationed inside and responsive cube integrated with LED “stars” which react to the user’s tilting. The player must navigate through holes in approaching walls by tilting in the tipper chair to the left or to the right as they accelerate through space.</p>
+                <p>The goal of the project was to create a highly interactive, person-scale gaming environment with a substantial software and hardware component. Our team of four was given just over seven weeks to design, develop, and execute our idea and create a fully integrated interactive game. The total cost of our finished product was $247.13 just under the $250 budget. Our project was immortalized in <a href="http://poe.olin.edu/2016/ThinkInsideTheBox">website format</a> with in-depth documentation on the development of mechanical, electrical, and software subsystems.</p>
+            </div>
+
+            <div class="col-md-12">
+                <h3>The Game</h3>
+                <p>The premise of our game is a young space explorer who's adventure is put on pause when their mother calls asking for assistance with the wifi at home. Before being able to continue their adventure, our hero must take on the task of navigating through space and return to their home planet. However, they must navigate their space ship through the many asteroid belts between their current position and their home planet.</p>
+                <center><iframe width="560" height="315" src="https://www.youtube.com/embed/9v5Hhk0FVnM" frameborder="0" allowfullscreen></iframe></center>
+                <p>Our game begins with the player entering a darkened cube made of wooden panels and lightproof fabric and sitting down in a sideways rocking chair embedded with tilt sensors. After the player hits the start button activating the hidden Arduino microcontroller, the wooden panel the player faces lights up with columns of "asteroids." In order to avoid crashing into the asteroid belts, the player must tilt towards a gap in the belt using the rocking chair. As the player tilts, the gap will appear to move left and right. The gap will also appear larger as the player approaches it. After passing through the gap, the player advances to the next level and must continue navigating through the gaps to continue home. As they progress, the ship moves faster and faster making the game more difficult as there is less time to navigate towards the gap. Should the player not make it through the gap, the wall will blink red to show that the player has died followed by the player's score indicated by the number of columns that reappear before the player in a waving rainbow color.</p>
+            </div>
+
+            <div class="col-md-12">
+                <h3>System</h3>
+                <div class="col-md-8">
+                    <img class="img-responsive" src="img/poe/system-schematic.png">
+                </div>
+                <div class="col-md-4">
+                    <p>This interaction between the player and the environment is enabled by a LED matrix and a gyroscope communicating though an Arduino. A small wooden rocking chair houses a gyroscope that is wired to the Arduino providing the game with the player's tilt position. This information then updates the player's position in the virtual world's matrix which is reflected by the 16 x 8 LED matrix in front of the player. As we were limited with I/O pins on the Arduino, an analog circuit was added between the Arduino and the LED matrix to enable bit shifting for contorl of a higher resolution RGB LED matrix. Power was routed through the Arduino from a wall outlet to both the LED matrix and the gyroscope.</p>
+                    <p>In order to allow for the disired immersive effect, we focused on the main interaction of the player and the environment noting that anything short of that would appear very lack luster. This, the scale of the project, and the limited resources reduced the number of features in the game.</p>
+                </div>
+                <div class="col-md-12">
+                    <p>The mechanical components of the system were the three paneled walls of the box and the chair that is placed inside the box. The box that envelopes the player is comprised of three hallow walls and a convertable-style fabric that encloses the top and back of the box using magnets.</p>
+                    <center><img src="img/poe/box.jpg" style="width: 50%"></center>
+                    <br>
+                    <p>The walls of the box were made using 2 sheets of thin wood panels fitted into slots routed into 2"x3" wood beams composing the frame. This allowed for a hallow space inside each wall in which the LEDs would be inserted. The outer panels would have the LED matrices mounted while the inner panels would have holes of various diameters drilled into them in a random pattern to give the effect of outter space. The sides panels facing towards each other in each wall would also be painted white to assist in the diffusion of light. This panel design would also enable us to swap out panels should we choose and provide us access to the electronics within. Holes were drilled through the frame for wiring to the arduino.</p>
+                    <center><img src="img/poe/mech_panels.png" style="width: 22%"><img src="img/poe/mech_modular.gif" style="width: 45%"></center>
+                    <br>
+                    <p>The chair was made of wooden dowls hand sawed and screwed into two CNC wood routed arches. FEA was conducted to ensure proper geometry that would safely allow for a players weight to push against the handles while seating and tilt without causing major strain on the arches. Wooden slats were added for comfort.</p>
+                    <center><img src="img/poe/mech_chair1.png" style="width: 40%"><img src="img/poe/mech_chair3.jpg" style="width: 40%"></center>
+                    <br>
+                    <p>The electrical components of the system include a gyroscope, analog circuit, Arduino, and 16 x 8 RGB LED matrix. We used the InvenSense MPU-6050 but since our game only reguired information about 1 axis, we were only interested in pitch. There are three wires from the Arduino to the IMU, the first is from INT to digital on the Arduino which parses data, and two from SCL and SDA to analog input on the Arduino which carries the measured rotation and acceleration.</p>
+                    <center><img src="img/poe/circuit.jpg" style="width: 50%"><img src="img/poe/circuit_all.jpg" style="width: 50%"></center>
+                    <br>
+                    <p>Although each RGB was individually addressable, we decided to link 8 LEDs into each of the 16 individually addressable LED columns along the front wall. This reduced the amount of wiring needed while sufficiently creating the type of 1 axis game play we aimed for. The R, G, B, and power pins of each LED column were then attached to the control pins of the 75HC595 shift registers. </p>
+                    <center><img src="img/poe/matrix.gif" style="width: 49%"> <img src="img/poe/star.gif" style="width: 49%"></center>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <h3>Demonstrations</h3>
+                <p>The finished project was robust enough to be presented at Olin College's end of the semester Exhibition during which guests to the school were able to enter our gaming environment and play the game. Demonstrations lasted more than an hour of nearly continuous use without any technical difficulties.</p>
+                <center><img src="img/poe/demo1.jpg" style="width: 45%"> <img src="img/poe/demo2.jpg" style="width: 45%"></center>
+                <br>
+                <center><iframe width="840" height="473" src="https://www.youtube.com/embed/LPRTb50Ki6k" frameborder="0" allowfullscreen></iframe></center>
+                <br>
+                <center><iframe width="840" height="473" src="https://www.youtube.com/embed/EepPfgmmujE" frameborder="0" allowfullscreen></iframe></center>
+
+                <hr>
+            </div>
+        <!-- /.row -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="index.html#about">About</a>
+                        </li>
+                        <li>
+                            <a href="index.html#projects">Projects</a>
+                        </li>
+                        <li>
+                            <a href="index.html#experience">Experience</a>
+                        </li>
+                        <li>
+                            <a href="index.html#contact">Contact</a>
+                        </li>
+                        <li>
+                            <a href="m.Tieu.pdf">Resume</a>
+                        </li>
+                    <p class="copyright text-muted small">A Mindy Tieu Website. January 2017.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
